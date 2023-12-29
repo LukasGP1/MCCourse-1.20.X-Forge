@@ -2,6 +2,7 @@ package de.lulkas_.mccourse;
 
 import com.mojang.logging.LogUtils;
 import de.lulkas_.mccourse.block.ModBlocks;
+import de.lulkas_.mccourse.item.ModCreativeModeTabs;
 import de.lulkas_.mccourse.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -30,6 +31,8 @@ public class MCCourseMod {
 
         ModItems.register(modEventBus);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModBlocks.register(modEventBus);
 
 
@@ -45,17 +48,7 @@ public class MCCourseMod {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.ALEXANDRITE);
-            event.accept(ModItems.RAW_ALEXANDRITE);
 
-            event.accept(ModBlocks.ALEXANDRITE_BLOCK);
-            event.accept(ModBlocks.ALEXANDRITE_ORE);
-            event.accept(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE);
-            event.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK);
-            event.accept(ModBlocks.END_STONE_ALEXANDRITE_ORE);
-            event.accept(ModBlocks.NETHER_ALEXANDRITE_ORE);
-        }
     }
 
     @SubscribeEvent
