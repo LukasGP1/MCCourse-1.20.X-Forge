@@ -2,10 +2,12 @@ package de.lulkas_.mccourse.block;
 
 import de.lulkas_.mccourse.MCCourseMod;
 import de.lulkas_.mccourse.item.ModItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
@@ -42,30 +44,36 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> ALEXANDRITE_ORE = registerBlock("alexandrite_ore",
             new Item.Properties(),
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_ORE))
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_ORE),
+                    UniformInt.of(1, 5)
+            )
     );
 
     public static final RegistryObject<Block> DEEPSLATE_ALEXANDRITE_ORE = registerBlock("deepslate_alexandrite_ore",
             new Item.Properties(),
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_IRON_ORE))
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_IRON_ORE),
+                    UniformInt.of(1, 5)
+            )
     );
 
     public static final RegistryObject<Block> END_STONE_ALEXANDRITE_ORE = registerBlock("end_stone_alexandrite_ore",
             new Item.Properties(),
-            () -> new Block(BlockBehaviour.Properties.of()
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.SAND)
                     .requiresCorrectToolForDrops()
-                    .strength(4.0F, 9.0F)
+                    .strength(4.0F, 9.0F),
+                    UniformInt.of(1, 5)
             )
     );
 
     public static final RegistryObject<Block> NETHER_ALEXANDRITE_ORE = registerBlock("nether_alexandrite_ore",
             new Item.Properties(),
-            () -> new Block(BlockBehaviour.Properties.of()
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.NETHER)
                     .requiresCorrectToolForDrops()
                     .strength(4.0F, 3.0F)
-                    .sound(SoundType.NETHER_ORE)
+                    .sound(SoundType.NETHER_ORE),
+                    UniformInt.of(1, 5)
             )
     );
 
