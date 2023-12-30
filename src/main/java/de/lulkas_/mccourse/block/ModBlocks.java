@@ -1,6 +1,7 @@
 package de.lulkas_.mccourse.block;
 
 import de.lulkas_.mccourse.MCCourseMod;
+import de.lulkas_.mccourse.block.custom.SoundBlock;
 import de.lulkas_.mccourse.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -80,6 +81,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> RAW_ALEXANDRITE_BLOCK = registerBlock("raw_alexandrite_block",
             new Item.Properties(),
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_IRON_BLOCK))
+    );
+
+    public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
+            new Item.Properties(),
+            () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.NOTE_BLOCK))
     );
 
 }

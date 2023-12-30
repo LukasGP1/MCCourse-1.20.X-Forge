@@ -23,7 +23,7 @@ public class MCCourseMod {
 
     public static final String MOD_ID = "mccourse";
 
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public MCCourseMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
