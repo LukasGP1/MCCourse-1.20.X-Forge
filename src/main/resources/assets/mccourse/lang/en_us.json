@@ -13,5 +13,10 @@
   "block.mccourse.end_stone_alexandrite_ore": "Endstone Alexandrite Ore",
   "block.mccourse.nether_alexandrite_ore": "Nether Alexandrite Ore",
   "block.mccourse.raw_alexandrite_block": "Raw Alexandrite Block",
-  "block.mccourse.sound_block": "Sound Block"
+  "block.mccourse.sound_block": "Sound Block",
+
+  "tooltip.mccourse.metal_detector.toolotip.default": "Press §eSHIFT§r for more information.",
+  "tooltip.mccourse.metal_detector.toolotip.shift": "Right Click on Blocks to find Valuables.",
+  "tooltip.mccourse.sound_block.tooltip.default": "Press §eSHIFT§r for more information.",
+  "tooltip.mccourse.sound_block.tooltip.shift": "Makes sounds when you stand on it, wenn you right click it and when you sneak and right click it."
 }
