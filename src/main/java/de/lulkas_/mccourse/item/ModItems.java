@@ -1,6 +1,7 @@
 package de.lulkas_.mccourse.item;
 
 import de.lulkas_.mccourse.MCCourseMod;
+import de.lulkas_.mccourse.item.custom.FuelItem;
 import de.lulkas_.mccourse.item.custom.MetalDetectorItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -27,6 +28,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()
                     .food(ModFoodProperties.KOHLRABI)
             )
+    );
+
+    public static final RegistryObject<Item> PEAT_BRICK = ITEMS.register("peat_brick",
+            () -> new FuelItem(new Item.Properties(), 200)
     );
 
     public static void register(IEventBus eventBus) {
