@@ -5,6 +5,7 @@ import de.lulkas_.mccourse.block.ModBlocks;
 import de.lulkas_.mccourse.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -25,6 +26,22 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.END_STONE_ALEXANDRITE_ORE.get())
                 .add(ModBlocks.NETHER_ALEXANDRITE_ORE.get())
                 .addTag(Tags.Blocks.ORES);
+
+        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ModBlocks.NETHER_ALEXANDRITE_ORE.get())
+                .add(ModBlocks.ALEXANDRITE_ORE.get())
+                .add(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get())
+                .add(ModBlocks.END_STONE_ALEXANDRITE_ORE.get())
+                .add(ModBlocks.ALEXANDRITE_BLOCK.get())
+                .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
+
+        this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
+                .add(ModBlocks.NETHER_ALEXANDRITE_ORE.get())
+                .add(ModBlocks.ALEXANDRITE_ORE.get())
+                .add(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get())
+                .add(ModBlocks.END_STONE_ALEXANDRITE_ORE.get())
+                .add(ModBlocks.ALEXANDRITE_BLOCK.get())
+                .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
     }
 
     @Override
