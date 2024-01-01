@@ -31,6 +31,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.NETHER_ALEXANDRITE_ORE.get());
                         pOutput.accept(ModBlocks.END_STONE_ALEXANDRITE_ORE.get());
                         pOutput.accept(ModBlocks.SOUND_BLOCK.get());
+                        pOutput.accept(ModBlocks.ALEXANDRITE_SLAB.get());
+                        pOutput.accept(ModBlocks.ALEXANDRITE_STAIRS.get());
                     })
                     .build()
     );

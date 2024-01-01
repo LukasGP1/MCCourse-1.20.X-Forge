@@ -33,7 +33,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get())
                 .add(ModBlocks.END_STONE_ALEXANDRITE_ORE.get())
                 .add(ModBlocks.ALEXANDRITE_BLOCK.get())
-                .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
+                .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())
+                .add(ModBlocks.ALEXANDRITE_SLAB.get())
+                .add(ModBlocks.ALEXANDRITE_STAIRS.get());
 
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
                 .add(ModBlocks.NETHER_ALEXANDRITE_ORE.get())
@@ -41,7 +43,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get())
                 .add(ModBlocks.END_STONE_ALEXANDRITE_ORE.get())
                 .add(ModBlocks.ALEXANDRITE_BLOCK.get())
-                .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
+                .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())
+                .add(ModBlocks.ALEXANDRITE_SLAB.get())
+                .add(ModBlocks.ALEXANDRITE_STAIRS.get());
     }
 
     @Override

@@ -47,6 +47,20 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         oreSmelting(pWriter, ALEXANDRITE_SMELTABLES, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.7f, 100, "alexandrite");
         oreBlasting(pWriter, ALEXANDRITE_SMELTABLES, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.7f, 50, "alexandrite");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALEXANDRITE_SLAB.get())
+                .pattern("AAA")
+                .define('A', ModItems.ALEXANDRITE.get())
+                .unlockedBy("has_alexandrite", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.ALEXANDRITE.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALEXANDRITE_STAIRS.get())
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', ModItems.ALEXANDRITE.get())
+                .unlockedBy("has_alexandrite", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.ALEXANDRITE.get()).build()))
+                .save(pWriter);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {

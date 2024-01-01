@@ -6,10 +6,7 @@ import de.lulkas_.mccourse.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -88,4 +85,18 @@ public class ModBlocks {
             () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.NOTE_BLOCK))
     );
 
+    public static final RegistryObject<Block> ALEXANDRITE_STAIRS = registerBlock("alexandrite_stairs",
+            new Item.Properties(),
+            () -> new StairBlock(() -> ModBlocks.ALEXANDRITE_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.GRANITE_STAIRS)
+                            .strength(4f, 6f)
+            )
+    );
+
+    public static final RegistryObject<Block> ALEXANDRITE_SLAB = registerBlock("alexandrite_slab",
+            new Item.Properties(),
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.GRANITE_SLAB)
+                    .strength(4f, 6f)
+            )
+    );
 }

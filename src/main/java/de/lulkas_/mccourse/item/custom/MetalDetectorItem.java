@@ -57,9 +57,9 @@ public class MetalDetectorItem extends Item {
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if(Screen.hasShiftDown()) {
-            pTooltipComponents.add(Component.translatable("tooltip.mccourse.metal_detector.toolotip.shift"));
+            pTooltipComponents.add(Component.translatable("tooltip.mccourse.metal_detector.tooltip.shift"));
         } else {
-            pTooltipComponents.add(Component.translatable("tooltip.mccourse.metal_detector.toolotip.default"));
+            pTooltipComponents.add(Component.translatable("tooltip.mccourse.metal_detector.tooltip.default"));
         }
 
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
