@@ -3,6 +3,7 @@ package de.lulkas_.mccourse.block;
 import de.lulkas_.mccourse.MCCourseMod;
 import de.lulkas_.mccourse.block.custom.SoundBlock;
 import de.lulkas_.mccourse.item.ModItems;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -112,11 +113,35 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> ALEXANDRITE_BUTTON = registerBlock("alexandrite_button",
             new Item.Properties(),
-            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON)
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON)
                     .strength(4f, 6f),
                     BlockSetType.IRON,
                     15,
                     true
+            )
+    );
+
+    public static final RegistryObject<Block> ALEXANDRITE_FENCE = registerBlock("alexandrite_fence",
+            new Item.Properties(),
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)
+                    .strength(4f, 6f)
+
+            )
+    );
+
+    public static final RegistryObject<Block> ALEXANDRITE_FENCE_GATE = registerBlock("alexandrite_fence_gate",
+            new Item.Properties(),
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)
+                    .strength(4f, 6f),
+                    SoundEvents.CHERRY_WOOD_FENCE_GATE_OPEN,
+                    SoundEvents.CHERRY_WOOD_FENCE_GATE_CLOSE
+            )
+    );
+
+    public static final RegistryObject<Block> ALEXANDRITE_WALL = registerBlock("alexandrite_wall",
+            new Item.Properties(),
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)
+                    .strength(4f, 6f)
             )
     );
 

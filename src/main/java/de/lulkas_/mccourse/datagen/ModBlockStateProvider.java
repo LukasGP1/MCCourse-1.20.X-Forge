@@ -31,10 +31,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
         slabBlock((SlabBlock) ModBlocks.ALEXANDRITE_SLAB.get(), blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()), blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()));
         pressurePlateBlock(((PressurePlateBlock) ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get()), blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()));
         buttonBlock(((ButtonBlock) ModBlocks.ALEXANDRITE_BUTTON.get()), blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()));
+        fenceBlock((FenceBlock) ModBlocks.ALEXANDRITE_FENCE.get(), blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.ALEXANDRITE_FENCE_GATE.get(), blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()));
+        wallBlock((WallBlock) ModBlocks.ALEXANDRITE_WALL.get(), blockTexture(ModBlocks.ALEXANDRITE_BLOCK.get()));
 
         blockItem(ModBlocks.ALEXANDRITE_STAIRS);
         blockItem(ModBlocks.ALEXANDRITE_SLAB);
         blockItem(ModBlocks.ALEXANDRITE_PRESSURE_PLATE);
+        blockItem(ModBlocks.ALEXANDRITE_FENCE_GATE);
     }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject) {

@@ -6,6 +6,7 @@ import de.lulkas_.mccourse.item.ModItems;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -69,6 +70,29 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get())
                 .pattern("AA")
+                .define('A', ModItems.ALEXANDRITE.get())
+                .unlockedBy("has_alexandrite", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.ALEXANDRITE.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALEXANDRITE_FENCE_GATE.get())
+                .pattern("SAS")
+                .pattern("SAS")
+                .define('S', Items.STICK)
+                .define('A', ModItems.ALEXANDRITE.get())
+                .unlockedBy("has_alexandrite", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.ALEXANDRITE.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALEXANDRITE_FENCE.get(), 3)
+                .pattern("ASA")
+                .pattern("ASA")
+                .define('S', Items.STICK)
+                .define('A', ModItems.ALEXANDRITE.get())
+                .unlockedBy("has_alexandrite", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.ALEXANDRITE.get()).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALEXANDRITE_WALL.get(), 6)
+                .pattern("AAA")
+                .pattern("AAA")
                 .define('A', ModItems.ALEXANDRITE.get())
                 .unlockedBy("has_alexandrite", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.ALEXANDRITE.get()).build()))
                 .save(pWriter);
