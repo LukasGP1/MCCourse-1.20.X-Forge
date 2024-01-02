@@ -35,7 +35,15 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.ALEXANDRITE_BLOCK.get())
                 .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())
                 .add(ModBlocks.ALEXANDRITE_SLAB.get())
-                .add(ModBlocks.ALEXANDRITE_STAIRS.get());
+                .add(ModBlocks.ALEXANDRITE_STAIRS.get())
+                .add(ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get())
+                .add(ModBlocks.ALEXANDRITE_BUTTON.get())
+                .add(ModBlocks.ALEXANDRITE_FENCE_GATE.get())
+                .add(ModBlocks.ALEXANDRITE_FENCE.get())
+                .add(ModBlocks.ALEXANDRITE_WALL.get())
+                .add(ModBlocks.ALEXANDRITE_DOOR.get())
+                .add(ModBlocks.ALEXANDRITE_TRAPDOOR.get())
+                .add(ModBlocks.SOUND_BLOCK.get());
 
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
                 .add(ModBlocks.NETHER_ALEXANDRITE_ORE.get())
@@ -45,7 +53,17 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.ALEXANDRITE_BLOCK.get())
                 .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())
                 .add(ModBlocks.ALEXANDRITE_SLAB.get())
-                .add(ModBlocks.ALEXANDRITE_STAIRS.get());
+                .add(ModBlocks.ALEXANDRITE_STAIRS.get())
+                .add(ModBlocks.ALEXANDRITE_PRESSURE_PLATE.get())
+                .add(ModBlocks.ALEXANDRITE_BUTTON.get())
+                .add(ModBlocks.ALEXANDRITE_FENCE_GATE.get())
+                .add(ModBlocks.ALEXANDRITE_FENCE.get())
+                .add(ModBlocks.ALEXANDRITE_WALL.get())
+                .add(ModBlocks.ALEXANDRITE_DOOR.get())
+                .add(ModBlocks.ALEXANDRITE_TRAPDOOR.get());
+
+        this.tag(ModTags.Blocks.NEEDS_ALEXANDRITE_TOOL)
+                .add(ModBlocks.SOUND_BLOCK.get());
 
         this.tag(BlockTags.FENCES)
                 .add(ModBlocks.ALEXANDRITE_FENCE.get());

@@ -84,7 +84,10 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
             new Item.Properties(),
-            () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.NOTE_BLOCK))
+            () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.NOTE_BLOCK)
+                    .strength(4f, 6f)
+                    .requiresCorrectToolForDrops()
+            )
     );
 
     public static final RegistryObject<Block> ALEXANDRITE_STAIRS = registerBlock("alexandrite_stairs",

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "mccourse:alexandrite"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " AA",
+    " SA",
+    " S "
+  ],
+  "result": {
+    "item": "mccourse:alexandrite_axe"
+  },
+  "show_notification": true
+}
