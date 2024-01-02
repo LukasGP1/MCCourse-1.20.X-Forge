@@ -21,6 +21,8 @@
   "block.mccourse.alexandrite_fence": "Alexandrite Fence",
   "block.mccourse.alexandrite_fence_gate": "Alexandrite Fence Gate",
   "block.mccourse.alexandrite_wall": "Alexandrite Wall",
+  "block.mccourse.alexandrite_door": "Alexandrite Door",
+  "block.mccourse.alexandrite_trapdoor": "Alexandrite Trapdoor",
 
   "tooltip.mccourse.metal_detector.tooltip.default": "Press §eSHIFT§r for more information.",
   "tooltip.mccourse.metal_detector.tooltip.shift": "Right Click on Blocks to find Valuables.",

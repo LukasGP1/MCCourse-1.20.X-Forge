@@ -145,4 +145,21 @@ public class ModBlocks {
             )
     );
 
+    public static final RegistryObject<Block> ALEXANDRITE_DOOR = registerBlock("alexandrite_door",
+            new Item.Properties(),
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR)
+                    .strength(4f, 6f),
+                    BlockSetType.IRON
+            )
+    );
+
+    public static final RegistryObject<Block> ALEXANDRITE_TRAPDOOR = registerBlock("alexandrite_trapdoor",
+            new Item.Properties(),
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_WALL)
+                    .strength(4f, 6f),
+                    BlockSetType.IRON
+            )
+    );
+
+
 }

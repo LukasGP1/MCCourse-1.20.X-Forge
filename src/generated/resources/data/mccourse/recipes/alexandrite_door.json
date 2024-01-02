@@ -7,13 +7,13 @@
     }
   },
   "pattern": [
-    "   ",
-    "AAA",
-    "AAA"
+    "AA",
+    "AA",
+    "AA"
   ],
   "result": {
-    "count": 6,
-    "item": "mccourse:alexandrite_wall"
+    "count": 3,
+    "item": "mccourse:alexandrite_door"
   },
   "show_notification": true
 }

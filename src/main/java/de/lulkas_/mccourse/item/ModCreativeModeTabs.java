@@ -38,6 +38,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.ALEXANDRITE_FENCE.get());
                         pOutput.accept(ModBlocks.ALEXANDRITE_FENCE_GATE.get());
                         pOutput.accept(ModBlocks.ALEXANDRITE_WALL.get());
+                        pOutput.accept(ModBlocks.ALEXANDRITE_DOOR.get());
+                        pOutput.accept(ModBlocks.ALEXANDRITE_TRAPDOOR.get());
                     })
                     .build()
     );
