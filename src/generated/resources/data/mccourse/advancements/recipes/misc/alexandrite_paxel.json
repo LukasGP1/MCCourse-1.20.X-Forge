@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "mccourse:alexandrite_shovel"
+        "recipe": "mccourse:alexandrite_paxel"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "mccourse:alexandrite_shovel"
+      "mccourse:alexandrite_paxel"
     ]
   },
   "sends_telemetry_event": false

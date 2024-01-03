@@ -1,7 +1,9 @@
-// 1.20.1	2024-01-02T07:27:39.2684202	Block Tags
-68bd45d1ae7770d9f155f706faef58dda56f6770 data/forge/tags/blocks/needs_netherite_tool.json
+// 1.20.1	2024-01-02T20:31:04.7962739	Block Tags
+711a99df8e83130c6155c8d3c3ce4802fb024442 data/forge/tags/blocks/needs_netherite_tool.json
 7990d65a7be225378804e8a855b495b83a94d760 data/mccourse/tags/blocks/metal_detector_valuables.json
+82362cfbd1836db13c7e9d36c8712821e795ac55 data/mccourse/tags/blocks/mineable/paxel.json
+25e466cd1ba914d4e24cb0f54cc06b3299fbfd55 data/mccourse/tags/blocks/needs_alexandrite_tool.json
 43b621c9e36eb4c7ee0e97ecc2dd841d090c7821 data/minecraft/tags/blocks/fences.json
 c019d56ddaf7b3dec0cca0ef234845dd8a1007a7 data/minecraft/tags/blocks/fence_gates.json
-68bd45d1ae7770d9f155f706faef58dda56f6770 data/minecraft/tags/blocks/mineable/pickaxe.json
+fd04635a2b625bed5906b1fe3c6fe679c6a89c93 data/minecraft/tags/blocks/mineable/pickaxe.json
 fcae742425a5d2edad1054f123baad77857ee1b5 data/minecraft/tags/blocks/walls.json

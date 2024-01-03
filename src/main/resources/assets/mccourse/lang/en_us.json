@@ -9,6 +9,7 @@
   "item.mccourse.alexandrite_axe": "Alexandrite Axe",
   "item.mccourse.alexandrite_shovel": "Alexandrite Shovel",
   "item.mccourse.alexandrite_hoe": "Alexandrite Hoe",
+  "item.mccourse.alexandrite_paxel": "Alexandrite Paxel",
 
   "creativetab.course_tab": "Course Tab",
 
@@ -32,5 +33,6 @@
   "tooltip.mccourse.metal_detector.tooltip.default": "Press §eSHIFT§r for more information.",
   "tooltip.mccourse.metal_detector.tooltip.shift": "Right Click on Blocks to find Valuables.",
   "tooltip.mccourse.sound_block.tooltip.default": "Press §eSHIFT§r for more information.",
-  "tooltip.mccourse.sound_block.tooltip.shift": "Makes sounds when you stand on it, wenn you right click it and when you sneak and right click it."
+  "tooltip.mccourse.sound_block.tooltip.shift": "Makes sounds when you stand on it, wenn you right click it and when you sneak and right click it.",
+  "tooltip.mccourse.paxel.tooltip": "This is an axe, a pickaxe and a shovel combined."
 }

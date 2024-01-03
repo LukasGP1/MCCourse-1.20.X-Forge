@@ -3,6 +3,7 @@ package de.lulkas_.mccourse.item;
 import de.lulkas_.mccourse.MCCourseMod;
 import de.lulkas_.mccourse.item.custom.FuelItem;
 import de.lulkas_.mccourse.item.custom.MetalDetectorItem;
+import de.lulkas_.mccourse.item.custom.PaxelItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -52,6 +53,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> ALEXANDRITE_HOE = ITEMS.register("alexandrite_hoe",
             () -> new HoeItem(ModToolTiers.ALEXANDRITE, 0, 0f, new Item.Properties())
+    );
+
+    public static final RegistryObject<Item> ALEXANDRITE_PAXEL = ITEMS.register("alexandrite_paxel",
+            () -> new PaxelItem(ModToolTiers.ALEXANDRITE, 4, -1f, new Item.Properties())
     );
 
     public static void register(IEventBus eventBus) {

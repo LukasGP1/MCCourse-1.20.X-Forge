@@ -7,6 +7,14 @@
     "mccourse:alexandrite_block",
     "mccourse:raw_alexandrite_block",
     "mccourse:alexandrite_slab",
-    "mccourse:alexandrite_stairs"
+    "mccourse:alexandrite_stairs",
+    "mccourse:alexandrite_pressure_plate",
+    "mccourse:alexandrite_button",
+    "mccourse:alexandrite_fence_gate",
+    "mccourse:alexandrite_fence",
+    "mccourse:alexandrite_wall",
+    "mccourse:alexandrite_door",
+    "mccourse:alexandrite_trapdoor",
+    "mccourse:sound_block"
   ]
 }

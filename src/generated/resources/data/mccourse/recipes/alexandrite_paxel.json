@@ -10,12 +10,12 @@
     }
   },
   "pattern": [
-    " A ",
-    " S ",
+    "AAA",
+    " SA",
     " S "
   ],
   "result": {
-    "item": "mccourse:alexandrite_shovel"
+    "item": "mccourse:alexandrite_paxel"
   },
   "show_notification": true
 }
