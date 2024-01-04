@@ -1,10 +1,7 @@
 package de.lulkas_.mccourse.item;
 
 import de.lulkas_.mccourse.MCCourseMod;
-import de.lulkas_.mccourse.item.custom.FuelItem;
-import de.lulkas_.mccourse.item.custom.HammerItem;
-import de.lulkas_.mccourse.item.custom.MetalDetectorItem;
-import de.lulkas_.mccourse.item.custom.PaxelItem;
+import de.lulkas_.mccourse.item.custom.*;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -37,7 +34,7 @@ public class ModItems {
     );
 
     public static final RegistryObject<Item> ALEXANDRITE_SWORD = ITEMS.register("alexandrite_sword",
-            () -> new SwordItem(ModToolTiers.ALEXANDRITE, 6, 0f, new Item.Properties())
+            () -> new SlowingSwordItem(ModToolTiers.ALEXANDRITE, 6, 0f, new Item.Properties())
     );
 
     public static final RegistryObject<Item> ALEXANDRITE_PICKAXE = ITEMS.register("alexandrite_pickaxe",
