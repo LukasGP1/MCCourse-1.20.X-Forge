@@ -36,6 +36,8 @@
   "block.mccourse.alexandrite_door": "Alexandrite Door",
   "block.mccourse.alexandrite_trapdoor": "Alexandrite Trapdoor",
 
+  "enchantment.mccourse.lightning_striker": "Lightning Striker",
+
   "tooltip.mccourse.metal_detector.tooltip.default": "Press §eSHIFT§r for more information.",
   "tooltip.mccourse.metal_detector.tooltip.shift": "Right Click on Blocks to find Valuables.",
   "tooltip.mccourse.sound_block.tooltip.default": "Press §eSHIFT§r for more information.",

@@ -2,6 +2,7 @@ package de.lulkas_.mccourse;
 
 import com.mojang.logging.LogUtils;
 import de.lulkas_.mccourse.block.ModBlocks;
+import de.lulkas_.mccourse.enchantment.ModEnchantments;
 import de.lulkas_.mccourse.item.ModCreativeModeTabs;
 import de.lulkas_.mccourse.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -34,6 +35,8 @@ public class MCCourseMod {
         ModCreativeModeTabs.register(modEventBus);
 
         ModBlocks.register(modEventBus);
+
+        ModEnchantments.register(modEventBus);
 
 
         modEventBus.addListener(this::commonSetup);
