@@ -1,6 +1,7 @@
 package de.lulkas_.mccourse.block;
 
 import de.lulkas_.mccourse.MCCourseMod;
+import de.lulkas_.mccourse.block.custom.AlexandriteLampBlock;
 import de.lulkas_.mccourse.block.custom.SoundBlock;
 import de.lulkas_.mccourse.item.ModItems;
 import net.minecraft.sounds.SoundEvents;
@@ -17,6 +18,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
+
+import static de.lulkas_.mccourse.block.custom.AlexandriteLampBlock.CLICKED;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MCCourseMod.MOD_ID);
@@ -164,5 +167,11 @@ public class ModBlocks {
             )
     );
 
-
+    public static final RegistryObject<Block> ALEXANDRITE_LAMP = registerBlock("alexandrite_lamp",
+            new Item.Properties(),
+            () -> new AlexandriteLampBlock(BlockBehaviour.Properties.copy(Blocks.REDSTONE_LAMP)
+                    .strength(4f, 6f)
+                    .lightLevel(state -> state.getValue(CLICKED) ? 15 : 0)
+            )
+    );
 }
