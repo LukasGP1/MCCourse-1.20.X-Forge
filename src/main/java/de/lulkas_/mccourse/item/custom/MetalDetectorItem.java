@@ -1,9 +1,12 @@
 package de.lulkas_.mccourse.item.custom;
 
+import de.lulkas_.mccourse.item.ModItems;
+import de.lulkas_.mccourse.util.InventoryUtil;
 import de.lulkas_.mccourse.util.ModTags;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -35,15 +38,20 @@ public class MetalDetectorItem extends Item {
                 BlockState blockState = pContext.getLevel().getBlockState(positionClicked.below(i));
 
                 if(isValuableBlock(blockState)) {
-                    outputValuableCoordinates(positionClicked.below(i), player, blockState.getBlock());
+                    //outputValuableCoordinates(positionClicked.below(i), player, blockState.getBlock());
                     foundBlock = true;
+
+                    if(InventoryUtil.hasPlayerStackInInventory(player, ModItems.DATA_TABLET.get())) {
+                        addDataToDataTablet(player, positionClicked.below(i), blockState.getBlock());
+                    }
 
                     break;
                 }
             }
 
             if(!foundBlock) {
-                outputNoValuableFound(player);
+                //outputNoValuableFound(player);
+                addDataToDataTablet(player);
             }
         }
 
@@ -52,6 +60,25 @@ public class MetalDetectorItem extends Item {
         });
 
         return InteractionResult.SUCCESS;
+    }
+
+    private void addDataToDataTablet(Player player) {
+        ItemStack dataTablet = player.getInventory().getItem(InventoryUtil.getFirstInventoryIndex(player, ModItems.DATA_TABLET.get()));
+
+        CompoundTag data = new CompoundTag();
+        data.putString("mccourse.detecting_result", "No valuable was found.");
+
+        dataTablet.setTag(data);
+    }
+
+    private void addDataToDataTablet(Player player, BlockPos pos, Block block) {
+        ItemStack dataTablet = player.getInventory().getItem(InventoryUtil.getFirstInventoryIndex(player, ModItems.DATA_TABLET.get()));
+
+        CompoundTag data = new CompoundTag();
+        data.putString("mccourse.detecting_result", "Valuable Found: " + I18n.get(block.getDescriptionId()) +
+                " at: " + pos.getX() + ", " + pos.getY() + ", " + pos.getZ());
+
+        dataTablet.setTag(data);
     }
 
     @Override
@@ -65,14 +92,14 @@ public class MetalDetectorItem extends Item {
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
 
-    private void outputNoValuableFound(Player player) {
-        player.sendSystemMessage(Component.literal("No valuable was found."));
-    }
+    // private void outputNoValuableFound(Player player) {
+    //     player.sendSystemMessage(Component.literal("No valuable was found."));
+    // }
 
-    private void outputValuableCoordinates(BlockPos pos, Player player, Block block) {
-        player.sendSystemMessage(Component.literal("Valuable Found: " + I18n.get(block.getDescriptionId()) +
-                " at: " + pos.getX() + ", " + pos.getY() + ", " + pos.getZ()));
-    }
+    // private void outputValuableCoordinates(BlockPos pos, Player player, Block block) {
+    //     player.sendSystemMessage(Component.literal("Valuable Found: " + I18n.get(block.getDescriptionId()) +
+    //             " at: " + pos.getX() + ", " + pos.getY() + ", " + pos.getZ()));
+    // }
 
     private boolean isValuableBlock(BlockState blockState) {
         return blockState.is(ModTags.Blocks.METAL_DETECTOR_VALUABLES);

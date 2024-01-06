@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:iron_ingot"
+    },
+    "S": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "ASA",
+    "AAA"
+  ],
+  "result": {
+    "item": "mccourse:data_tablet"
+  },
+  "show_notification": true
+}

@@ -1,4 +1,4 @@
-// 1.20.1	2024-01-05T20:05:54.0808067	Recipes
+// 1.20.1	2024-01-06T07:46:14.7795989	Recipes
 15201a36d0ae05c11f8a82b7b43dcf940f56c7f4 data/mccourse/advancements/recipes/misc/alexandrite.json
 78aa9c71a1c36dc6efecd6bff59db48d992be103 data/mccourse/advancements/recipes/misc/alexandrite_axe.json
 ee0129f24bb36d18562730a2dda377e622f5da76 data/mccourse/advancements/recipes/misc/alexandrite_block.json
@@ -27,6 +27,7 @@ d8b0da4a496433a177cb0818fc738ef714f9dd7c data/mccourse/advancements/recipes/misc
 4028f14d683cdeac52d037dfe44db96206f28eeb data/mccourse/advancements/recipes/misc/alexandrite_sword.json
 6d05c1f8c98b820cf4a397310c3ed7e50cc8ea1c data/mccourse/advancements/recipes/misc/alexandrite_trapdoor.json
 50bbad363dfaa03a41cd468571e1a0ac8fe9c959 data/mccourse/advancements/recipes/misc/alexandrite_wall.json
+1a74102fabd008522dc9142b502eb9a40f6fa7cd data/mccourse/advancements/recipes/misc/data_tablet.json
 e73e936ffd0b7189e92d0e3ee64b131a5231a4c2 data/mccourse/advancements/recipes/misc/raw_alexandrite.json
 9ee2cebe9c88508ec4dc7e5d38cbf87b45c51dd6 data/mccourse/advancements/recipes/misc/raw_alexandrite_block.json
 018a7b411f8a306a1248fa4ee8977258b327ce7a data/mccourse/recipes/alexandrite.json
@@ -57,5 +58,6 @@ ef4c0115345e01815efc8326253c78833bc29305 data/mccourse/recipes/alexandrite_picka
 55e33d4a81576eb14751ce244b1f5b043e8f6ae3 data/mccourse/recipes/alexandrite_sword.json
 6787cfa19b59cbb3b9b21ca17a8a0938380711f2 data/mccourse/recipes/alexandrite_trapdoor.json
 68e684df3311a78339b6fc3c41e82ad38489a714 data/mccourse/recipes/alexandrite_wall.json
+1b9956f93f63de6b94b6950581886140c8c7fabb data/mccourse/recipes/data_tablet.json
 978ac4a14642d2decd41a15437fe6bcff13e8538 data/mccourse/recipes/raw_alexandrite.json
 3f566789b8486eb50c9a2d52ebcc8efd03f41e80 data/mccourse/recipes/raw_alexandrite_block.json

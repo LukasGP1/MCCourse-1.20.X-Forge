@@ -177,6 +177,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', ModItems.ALEXANDRITE.get())
                 .unlockedBy("has_alexandrite", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.ALEXANDRITE.get()).build()))
                 .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.DATA_TABLET.get())
+                .pattern("AAA")
+                .pattern("ASA")
+                .pattern("AAA")
+                .define('S', Items.REDSTONE)
+                .define('A', Items.IRON_INGOT)
+                .unlockedBy("has_alexandrite", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.ALEXANDRITE.get()).build()))
+                .save(pWriter);
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
