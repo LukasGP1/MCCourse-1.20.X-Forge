@@ -7,6 +7,7 @@ import de.lulkas_.mccourse.item.ModCreativeModeTabs;
 import de.lulkas_.mccourse.item.ModItemProperties;
 import de.lulkas_.mccourse.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -48,7 +49,10 @@ public class MCCourseMod {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            ComposterBlock.COMPOSTABLES.put(ModItems.KOHLRABI.get(), 1f);
+            ComposterBlock.COMPOSTABLES.put(ModItems.KOHLRABI_SEEDS.get(), 0.5f);
+        });
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
