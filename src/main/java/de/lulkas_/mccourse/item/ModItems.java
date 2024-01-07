@@ -1,6 +1,7 @@
 package de.lulkas_.mccourse.item;
 
 import de.lulkas_.mccourse.MCCourseMod;
+import de.lulkas_.mccourse.block.ModBlocks;
 import de.lulkas_.mccourse.item.custom.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
@@ -84,6 +85,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> DATA_TABLET = ITEMS.register("data_tablet",
             () -> new DataTabletItem(new Item.Properties().stacksTo(1))
+    );
+
+    public static final RegistryObject<Item> KOHLRABI_SEEDS = ITEMS.register("kohlrabi_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.KOHLRABI_CROP.get(), new Item.Properties())
     );
 
     public static void register(IEventBus eventBus) {

@@ -2,6 +2,7 @@ package de.lulkas_.mccourse.block;
 
 import de.lulkas_.mccourse.MCCourseMod;
 import de.lulkas_.mccourse.block.custom.AlexandriteLampBlock;
+import de.lulkas_.mccourse.block.custom.KohlrabiCropBlock;
 import de.lulkas_.mccourse.block.custom.SoundBlock;
 import de.lulkas_.mccourse.item.ModItems;
 import net.minecraft.sounds.SoundEvents;
@@ -172,6 +173,13 @@ public class ModBlocks {
             () -> new AlexandriteLampBlock(BlockBehaviour.Properties.copy(Blocks.REDSTONE_LAMP)
                     .strength(4f, 6f)
                     .lightLevel(state -> state.getValue(CLICKED) ? 15 : 0)
+            )
+    );
+
+    public static final RegistryObject<Block> KOHLRABI_CROP = BLOCKS.register("kohlrabi_crop",
+            () -> new KohlrabiCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)
+                    .noCollission()
+                    .noOcclusion()
             )
     );
 }
