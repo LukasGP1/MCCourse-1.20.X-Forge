@@ -55,6 +55,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.ALEXANDRITE_DOOR.get());
                         pOutput.accept(ModBlocks.ALEXANDRITE_TRAPDOOR.get());
                         pOutput.accept(ModBlocks.ALEXANDRITE_LAMP.get());
+                        pOutput.accept(ModBlocks.SNAPDRAGON.get());
                     })
                     .build()
     );

@@ -7,6 +7,7 @@ import de.lulkas_.mccourse.block.custom.SoundBlock;
 import de.lulkas_.mccourse.item.ModItems;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -181,5 +182,14 @@ public class ModBlocks {
                     .noCollission()
                     .noOcclusion()
             )
+    );
+
+    public static final RegistryObject<Block> SNAPDRAGON = registerBlock("snapdragon",
+            new Item.Properties(),
+            () -> new FlowerBlock(() -> MobEffects.HEALTH_BOOST, 200, BlockBehaviour.Properties.copy(Blocks.ALLIUM))
+    );
+
+    public static final RegistryObject<Block> POTTED_SNAPDRAGON = BLOCKS.register("potted_snapdragon",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), SNAPDRAGON, BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM))
     );
 }
