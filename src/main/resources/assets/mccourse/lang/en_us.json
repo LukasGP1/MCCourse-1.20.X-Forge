@@ -44,6 +44,8 @@
 
   "enchantment.mccourse.lightning_striker": "Lightning Striker",
 
+  "sounds.mccourse.metal_detector.found_ore": "Metal Detector found Ore",
+
   "tooltip.mccourse.metal_detector.tooltip.default": "Press §eSHIFT§r for more information.",
   "tooltip.mccourse.metal_detector.tooltip.shift": "Right Click on Blocks to find Valuables.",
   "tooltip.mccourse.sound_block.tooltip.default": "Press §eSHIFT§r for more information.",

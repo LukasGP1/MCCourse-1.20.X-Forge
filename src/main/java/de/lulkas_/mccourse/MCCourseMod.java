@@ -6,6 +6,7 @@ import de.lulkas_.mccourse.enchantment.ModEnchantments;
 import de.lulkas_.mccourse.item.ModCreativeModeTabs;
 import de.lulkas_.mccourse.item.ModItemProperties;
 import de.lulkas_.mccourse.item.ModItems;
+import de.lulkas_.mccourse.sound.ModSounds;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
@@ -41,6 +42,8 @@ public class MCCourseMod {
         ModBlocks.register(modEventBus);
 
         ModEnchantments.register(modEventBus);
+
+        ModSounds.register(modEventBus);
 
 
         modEventBus.addListener(this::commonSetup);
