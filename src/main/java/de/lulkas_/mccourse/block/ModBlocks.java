@@ -5,6 +5,7 @@ import de.lulkas_.mccourse.block.custom.AlexandriteLampBlock;
 import de.lulkas_.mccourse.block.custom.KohlrabiCropBlock;
 import de.lulkas_.mccourse.block.custom.SoundBlock;
 import de.lulkas_.mccourse.item.ModItems;
+import de.lulkas_.mccourse.sound.ModSounds;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
@@ -174,6 +175,7 @@ public class ModBlocks {
             () -> new AlexandriteLampBlock(BlockBehaviour.Properties.copy(Blocks.REDSTONE_LAMP)
                     .strength(4f, 6f)
                     .lightLevel(state -> state.getValue(CLICKED) ? 15 : 0)
+                    .sound(ModSounds.ALEXANDRITE_LAMP_SOUNDS)
             )
     );
 

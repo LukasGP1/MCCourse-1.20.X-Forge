@@ -45,6 +45,11 @@
   "enchantment.mccourse.lightning_striker": "Lightning Striker",
 
   "sounds.mccourse.metal_detector.found_ore": "Metal Detector found Ore",
+  "sounds.mccourse.alexandrite_lamp.break": "Alexandrite Lamp Break",
+  "sounds.mccourse.alexandrite_lamp.place": "Alexandrite Lamp Place",
+  "sounds.mccourse.alexandrite_lamp.step": "Alexandrite Lamp Step",
+  "sounds.mccourse.alexandrite_lamp.fall": "Alexandrite Lamp Fall",
+  "sounds.mccourse.alexandrite_lamp.hit": "Alexandrite Lamp Hit",
 
   "tooltip.mccourse.metal_detector.tooltip.default": "Press §eSHIFT§r for more information.",
   "tooltip.mccourse.metal_detector.tooltip.shift": "Right Click on Blocks to find Valuables.",
