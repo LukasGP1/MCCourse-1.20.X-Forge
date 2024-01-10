@@ -2,6 +2,7 @@ package de.lulkas_.mccourse.block;
 
 import de.lulkas_.mccourse.MCCourseMod;
 import de.lulkas_.mccourse.block.custom.AlexandriteLampBlock;
+import de.lulkas_.mccourse.block.custom.GemEmpoweringStationBlock;
 import de.lulkas_.mccourse.block.custom.KohlrabiCropBlock;
 import de.lulkas_.mccourse.block.custom.SoundBlock;
 import de.lulkas_.mccourse.item.ModItems;
@@ -194,5 +195,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> POTTED_SNAPDRAGON = BLOCKS.register("potted_snapdragon",
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), SNAPDRAGON, BlockBehaviour.Properties.copy(Blocks.POTTED_ALLIUM)
                     .noLootTable())
+    );
+
+    public static final RegistryObject<Block> GEM_EMPOWERING_STATION = registerBlock("gem_empowering_station",
+            new Item.Properties(),
+            () -> new GemEmpoweringStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion())
     );
 }

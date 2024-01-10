@@ -33,6 +33,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.ALEXANDRITE_TRAPDOOR.get());
         this.dropSelf(ModBlocks.ALEXANDRITE_LAMP.get());
         this.dropSelf(ModBlocks.SNAPDRAGON.get());
+        this.dropSelf(ModBlocks.GEM_EMPOWERING_STATION.get());
 
         this.add(ModBlocks.ALEXANDRITE_ORE.get(), block -> createOreDrop(ModBlocks.ALEXANDRITE_ORE.get(), ModItems.RAW_ALEXANDRITE.get()));
         this.add(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get(), block -> createOreDrop(ModBlocks.DEEPSLATE_ALEXANDRITE_ORE.get(), ModItems.RAW_ALEXANDRITE.get()));

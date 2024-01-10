@@ -67,6 +67,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
                         blockTexture(ModBlocks.SNAPDRAGON.get())
                 ).renderType("cutout")
         );
+
+        horizontalBlock(ModBlocks.GEM_EMPOWERING_STATION.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/gem_empowering_station"))
+        );
     }
 
     public void makeCrop(CropBlock block, String modelName, String textureName) {
