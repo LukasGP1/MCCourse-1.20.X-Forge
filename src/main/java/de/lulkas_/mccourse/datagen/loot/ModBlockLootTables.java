@@ -11,6 +11,7 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePrope
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.Collection;
 import java.util.Set;
 
 public class ModBlockLootTables extends BlockLootSubProvider {

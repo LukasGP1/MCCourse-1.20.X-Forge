@@ -14,6 +14,8 @@ public class ModSounds {
 
     public static final RegistryObject<SoundEvent> METAL_DETECTOR_FOUND_ORE = registerSoundEvent("metal_detector_found_ore");
 
+    public static final RegistryObject<SoundEvent> BAR_BRAWL = registerSoundEvent("bar_brawl");
+
     public static final RegistryObject<SoundEvent> ALEXANDRITE_LAMP_BREAK = registerSoundEvent("alexandrite_lamp_break");
     public static final RegistryObject<SoundEvent> ALEXANDRITE_LAMP_STEP = registerSoundEvent("alexandrite_lamp_step");
     public static final RegistryObject<SoundEvent> ALEXANDRITE_LAMP_FALL = registerSoundEvent("alexandrite_lamp_fall");

@@ -5,6 +5,15 @@
       "mccourse:metal_detector/found_ore"
     ]
   },
+  "bar_brawl": {
+    "subtitle": "sounds.mccourse.bar_brawl",
+    "sounds": [
+      {
+        "name": "mccourse:bar_brawl",
+        "stream": true
+      }
+    ]
+  },
   "alexandrite_lamp_break": {
     "subtitle": "sounds.mccourse.alexandrite_lamp.break",
     "sounds": [
