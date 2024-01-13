@@ -39,6 +39,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.KOHLRABI_SEEDS.get());
                         pOutput.accept(ModItems.BAR_BRAWL_RECORD.get());
                         pOutput.accept(ModItems.ALEXANDRITE_BOW.get());
+                        pOutput.accept(ModItems.ALEXANDRITE_SHIELD.get());
 
                         pOutput.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
                         pOutput.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());

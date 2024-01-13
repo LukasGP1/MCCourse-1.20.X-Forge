@@ -108,6 +108,13 @@ public class ModItems {
             )
     );
 
+    public static final RegistryObject<Item> ALEXANDRITE_SHIELD = ITEMS.register("alexandrite_shield",
+            () -> new ShieldItem(new Item.Properties()
+                    .stacksTo(1)
+                    .durability(500)
+            )
+    );
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
