@@ -100,6 +100,14 @@ public class ModItems {
             )
     );
 
+    public static final RegistryObject<Item> ALEXANDRITE_BOW = ITEMS.register("alexandrite_bow",
+            () -> new ModBowItem(new Item.Properties()
+                    .stacksTo(1)
+                    .durability(500),
+                    5.0F
+            )
+    );
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
