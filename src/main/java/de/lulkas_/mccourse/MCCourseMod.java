@@ -6,6 +6,7 @@ import de.lulkas_.mccourse.enchantment.ModEnchantments;
 import de.lulkas_.mccourse.item.ModCreativeModeTabs;
 import de.lulkas_.mccourse.item.ModItemProperties;
 import de.lulkas_.mccourse.item.ModItems;
+import de.lulkas_.mccourse.loot.ModLootModifiers;
 import de.lulkas_.mccourse.sound.ModSounds;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
@@ -34,17 +35,12 @@ public class MCCourseMod {
     public MCCourseMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-
         ModItems.register(modEventBus);
-
         ModCreativeModeTabs.register(modEventBus);
-
         ModBlocks.register(modEventBus);
-
         ModEnchantments.register(modEventBus);
-
         ModSounds.register(modEventBus);
-
+        ModLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
