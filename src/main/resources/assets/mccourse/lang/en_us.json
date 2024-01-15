@@ -58,6 +58,14 @@
   "sounds.mccourse.alexandrite_lamp.hit": "Alexandrite Lamp Hit",
   "sounds.mccourse.bar_brawl": "Bar Brawl",
 
+  "painting.mccourse.world.title": "World",
+  "painting.mccourse.shrimp.title": "Shrimp",
+  "painting.mccourse.saw_them.title": "Saw them",
+
+  "painting.mccourse.saw_them.author": "NanoAttack",
+  "painting.mccourse.shrimp.author": "NanoAttack",
+  "painting.mccourse.world.author": "NanoAttack",
+
   "tooltip.mccourse.metal_detector.tooltip.default": "Press §eSHIFT§r for more information.",
   "tooltip.mccourse.metal_detector.tooltip.shift": "Right Click on Blocks to find Valuables.",
   "tooltip.mccourse.sound_block.tooltip.default": "Press §eSHIFT§r for more information.",
