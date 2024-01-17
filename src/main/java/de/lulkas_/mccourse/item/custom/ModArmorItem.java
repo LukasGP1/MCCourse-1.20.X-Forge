@@ -1,6 +1,7 @@
 package de.lulkas_.mccourse.item.custom;
 
 import com.google.common.collect.ImmutableMap;
+import de.lulkas_.mccourse.effect.ModEffects;
 import de.lulkas_.mccourse.item.ModArmorMaterials;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -14,7 +15,7 @@ import java.util.Map;
 
 public class ModArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP = (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-            .put(ModArmorMaterials.ALEXANDRITE, new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 1))
+            .put(ModArmorMaterials.ALEXANDRITE, new MobEffectInstance(ModEffects.SLIMEY_EFFECT.get(), 200, 1))
             .build();
 
     public ModArmorItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {

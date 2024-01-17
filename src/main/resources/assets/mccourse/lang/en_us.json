@@ -66,6 +66,8 @@
   "painting.mccourse.shrimp.author": "NanoAttack",
   "painting.mccourse.world.author": "NanoAttack",
 
+  "effect.mccourse.slimey": "Slimey",
+
   "tooltip.mccourse.metal_detector.tooltip.default": "Press §eSHIFT§r for more information.",
   "tooltip.mccourse.metal_detector.tooltip.shift": "Right Click on Blocks to find Valuables.",
   "tooltip.mccourse.sound_block.tooltip.default": "Press §eSHIFT§r for more information.",
