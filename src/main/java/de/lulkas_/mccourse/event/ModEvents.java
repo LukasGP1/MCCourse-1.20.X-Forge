@@ -1,10 +1,12 @@
 package de.lulkas_.mccourse.event;
 
 import de.lulkas_.mccourse.MCCourseMod;
+import de.lulkas_.mccourse.block.ModBlocks;
 import de.lulkas_.mccourse.command.ReturnHomeCommand;
 import de.lulkas_.mccourse.command.SetHomeCommand;
 import de.lulkas_.mccourse.item.ModItems;
 import de.lulkas_.mccourse.item.custom.HammerItem;
+import de.lulkas_.mccourse.villager.ModVillagers;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -98,6 +100,120 @@ public class ModEvents {
                     (pTrader, pRandom) -> new MerchantOffer(
                             new ItemStack(Items.EMERALD),
                             stack,
+                            10,
+                            2,
+                            0.02f
+                    )
+            );
+        }
+
+        if(event.getType() == ModVillagers.SOUND_MASTER.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+
+            trades.get(1).add(
+                    (pTrader, pRandom) -> new MerchantOffer(
+                            new ItemStack(Items.EMERALD, 25),
+                            new ItemStack(ModItems.BAR_BRAWL_RECORD.get()),
+                            10,
+                            2,
+                            0.02f
+                    )
+            );
+
+            trades.get(1).add(
+                    (pTrader, pRandom) -> new MerchantOffer(
+                            new ItemStack(Items.EMERALD, 1),
+                            new ItemStack(ModBlocks.SOUND_BLOCK.get()),
+                            10,
+                            2,
+                            0.02f
+                    )
+            );
+
+            trades.get(1).add(
+                    (pTrader, pRandom) -> new MerchantOffer(
+                            new ItemStack(ModItems.PEAT_BRICK.get(), 4),
+                            new ItemStack(Items.EMERALD, 1),
+                            10,
+                            2,
+                            0.02f
+                    )
+            );
+
+            trades.get(2).add(
+                    (pTrader, pRandom) -> new MerchantOffer(
+                            new ItemStack(Items.EMERALD, 3),
+                            new ItemStack(ModBlocks.ALEXANDRITE_LAMP.get()),
+                            10,
+                            2,
+                            0.02f
+                    )
+            );
+
+            trades.get(2).add(
+                    (pTrader, pRandom) -> new MerchantOffer(
+                            new ItemStack(Items.EMERALD, 1),
+                            new ItemStack(ModBlocks.SNAPDRAGON.get()),
+                            10,
+                            2,
+                            0.02f
+                    )
+            );
+
+            trades.get(2).add(
+                    (pTrader, pRandom) -> new MerchantOffer(
+                            new ItemStack(ModItems.PEAT_BRICK.get(), 3),
+                            new ItemStack(Items.EMERALD, 1),
+                            10,
+                            2,
+                            0.02f
+                    )
+            );
+
+            trades.get(3).add(
+                    (pTrader, pRandom) -> new MerchantOffer(
+                            new ItemStack(Items.EMERALD, 3),
+                            new ItemStack(ModItems.METAL_DETECTOR.get()),
+                            10,
+                            2,
+                            0.02f
+                    )
+            );
+
+            trades.get(3).add(
+                    (pTrader, pRandom) -> new MerchantOffer(
+                            new ItemStack(Items.EMERALD, 3),
+                            new ItemStack(ModItems.DATA_TABLET.get()),
+                            10,
+                            2,
+                            0.02f
+                    )
+            );
+
+            trades.get(3).add(
+                    (pTrader, pRandom) -> new MerchantOffer(
+                            new ItemStack(ModItems.PEAT_BRICK.get(), 2),
+                            new ItemStack(Items.EMERALD, 1),
+                            10,
+                            2,
+                            0.02f
+                    )
+            );
+
+            trades.get(4).add(
+                    (pTrader, pRandom) -> new MerchantOffer(
+                            new ItemStack(Items.EMERALD, 5),
+                            new ItemStack(ModBlocks.GEM_EMPOWERING_STATION.get()),
+                            10,
+                            2,
+                            0.02f
+                    )
+            );
+
+            trades.get(4).add(
+                    (pTrader, pRandom) -> new MerchantOffer(
+                            new ItemStack(ModItems.PEAT_BRICK.get(), 1),
+                            new ItemStack(Items.EMERALD, 1),
                             10,
                             2,
                             0.02f
