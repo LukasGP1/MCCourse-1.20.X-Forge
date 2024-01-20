@@ -9,12 +9,17 @@ import de.lulkas_.mccourse.item.ModItemProperties;
 import de.lulkas_.mccourse.item.ModItems;
 import de.lulkas_.mccourse.loot.ModLootModifiers;
 import de.lulkas_.mccourse.painting.ModPaintings;
+import de.lulkas_.mccourse.potion.BetterBrewingRecipe;
+import de.lulkas_.mccourse.potion.ModPotions;
 import de.lulkas_.mccourse.sound.ModSounds;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -44,6 +49,7 @@ public class MCCourseMod {
         ModLootModifiers.register(modEventBus);
         ModPaintings.register(modEventBus);
         ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -58,6 +64,8 @@ public class MCCourseMod {
             ComposterBlock.COMPOSTABLES.put(ModItems.KOHLRABI_SEEDS.get(), 0.5f);
 
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.SNAPDRAGON.getId(), ModBlocks.POTTED_SNAPDRAGON);
+
+            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD, Items.SLIME_BALL, ModPotions.SLIMEY_POTION.get()));
         });
     }
 
