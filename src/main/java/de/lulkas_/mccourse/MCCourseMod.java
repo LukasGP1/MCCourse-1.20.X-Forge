@@ -9,6 +9,7 @@ import de.lulkas_.mccourse.item.ModItemProperties;
 import de.lulkas_.mccourse.item.ModItems;
 import de.lulkas_.mccourse.loot.ModLootModifiers;
 import de.lulkas_.mccourse.painting.ModPaintings;
+import de.lulkas_.mccourse.particle.ModParticles;
 import de.lulkas_.mccourse.potion.BetterBrewingRecipe;
 import de.lulkas_.mccourse.potion.ModPotions;
 import de.lulkas_.mccourse.sound.ModSounds;
@@ -52,6 +53,7 @@ public class MCCourseMod {
         ModEffects.register(modEventBus);
         ModPotions.register(modEventBus);
         ModVillagers.register(modEventBus);
+        ModParticles.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

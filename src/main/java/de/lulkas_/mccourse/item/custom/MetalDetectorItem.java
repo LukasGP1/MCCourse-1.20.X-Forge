@@ -1,14 +1,20 @@
 package de.lulkas_.mccourse.item.custom;
 
 import de.lulkas_.mccourse.item.ModItems;
+import de.lulkas_.mccourse.particle.ModParticles;
 import de.lulkas_.mccourse.sound.ModSounds;
 import de.lulkas_.mccourse.util.InventoryUtil;
 import de.lulkas_.mccourse.util.ModTags;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.BlockParticleOption;
+import net.minecraft.core.particles.ItemParticleOption;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -55,6 +61,8 @@ public class MetalDetectorItem extends Item {
                             0
                     );
 
+                    spawnFoundParticles(pContext, positionClicked, blockState);
+
                     break;
                 }
             }
@@ -70,6 +78,34 @@ public class MetalDetectorItem extends Item {
         });
 
         return InteractionResult.SUCCESS;
+    }
+
+    private void spawnFoundParticles(UseOnContext pContext, BlockPos positionClicked, BlockState blockState) {
+        for(int i = 0; i < 20; i++) {
+            ServerLevel level = (ServerLevel) pContext.getLevel();
+
+            level.sendParticles(ModParticles.ALEXANDRITE_PARTICLE.get(),
+                    positionClicked.getX() + 0.5d,
+                    positionClicked.getY() + 1,
+                    positionClicked.getZ() + 0.5d,
+                    1,
+                    Math.cos(i * 18) * 0.15d,
+                    0.15d,
+                    Math.sin(i * 18) * 0.15d,
+                    0.1
+            );
+
+            level.sendParticles(new ItemParticleOption(ParticleTypes.ITEM, new ItemStack(Item.byBlock(blockState.getBlock()))),
+                    positionClicked.getX() + 0.5d,
+                    positionClicked.getY() + 1,
+                    positionClicked.getZ() + 0.5d,
+                    1,
+                    Math.cos(i * 18) * 0.15d,
+                    0.15d,
+                    Math.sin(i * 18) * 0.15d,
+                    0.1
+            );
+        }
     }
 
     private void addDataToDataTablet(Player player) {
