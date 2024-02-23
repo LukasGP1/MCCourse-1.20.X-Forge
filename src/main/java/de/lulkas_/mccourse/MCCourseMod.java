@@ -2,6 +2,7 @@ package de.lulkas_.mccourse;
 
 import com.mojang.logging.LogUtils;
 import de.lulkas_.mccourse.block.ModBlocks;
+import de.lulkas_.mccourse.block.entity.ModBlockEntities;
 import de.lulkas_.mccourse.effect.ModEffects;
 import de.lulkas_.mccourse.enchantment.ModEnchantments;
 import de.lulkas_.mccourse.item.ModCreativeModeTabs;
@@ -12,8 +13,11 @@ import de.lulkas_.mccourse.painting.ModPaintings;
 import de.lulkas_.mccourse.particle.ModParticles;
 import de.lulkas_.mccourse.potion.BetterBrewingRecipe;
 import de.lulkas_.mccourse.potion.ModPotions;
+import de.lulkas_.mccourse.screen.GemEmpoweringStationScreen;
+import de.lulkas_.mccourse.screen.ModMenuTypes;
 import de.lulkas_.mccourse.sound.ModSounds;
 import de.lulkas_.mccourse.villager.ModVillagers;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
@@ -54,6 +58,8 @@ public class MCCourseMod {
         ModPotions.register(modEventBus);
         ModVillagers.register(modEventBus);
         ModParticles.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -89,6 +95,8 @@ public class MCCourseMod {
         public static void onClientSetup(FMLClientSetupEvent event) {
             event.enqueueWork(() ->  {
                 ModItemProperties.addCustomItemProperties();
+
+                MenuScreens.register(ModMenuTypes.GEM_EMPOWERING_MENU.get(), GemEmpoweringStationScreen::new);
             });
         }
     }
