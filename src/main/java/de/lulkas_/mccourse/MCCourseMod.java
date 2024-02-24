@@ -13,6 +13,7 @@ import de.lulkas_.mccourse.painting.ModPaintings;
 import de.lulkas_.mccourse.particle.ModParticles;
 import de.lulkas_.mccourse.potion.BetterBrewingRecipe;
 import de.lulkas_.mccourse.potion.ModPotions;
+import de.lulkas_.mccourse.recipe.ModRecipes;
 import de.lulkas_.mccourse.screen.GemEmpoweringStationScreen;
 import de.lulkas_.mccourse.screen.ModMenuTypes;
 import de.lulkas_.mccourse.sound.ModSounds;
@@ -60,6 +61,7 @@ public class MCCourseMod {
         ModParticles.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+        ModRecipes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

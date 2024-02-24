@@ -1,0 +1,13 @@
+{
+  "type": "mccourse:gem_empowering",
+  "ingredients": [
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "output": {
+    "count": 2,
+    "item": "minecraft:coal"
+  },
+  "time": 10
+}

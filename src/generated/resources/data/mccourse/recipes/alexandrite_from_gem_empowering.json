@@ -1,0 +1,13 @@
+{
+  "type": "mccourse:gem_empowering",
+  "ingredients": [
+    {
+      "item": "mccourse:raw_alexandrite"
+    }
+  ],
+  "output": {
+    "count": 3,
+    "item": "mccourse:alexandrite"
+  },
+  "time": 50
+}

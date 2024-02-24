@@ -2,6 +2,7 @@ package de.lulkas_.mccourse.datagen;
 
 import de.lulkas_.mccourse.MCCourseMod;
 import de.lulkas_.mccourse.block.ModBlocks;
+import de.lulkas_.mccourse.datagen.custom.GemEmpoweringRecipeBuilder;
 import de.lulkas_.mccourse.item.ModItems;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
@@ -185,6 +186,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', Items.REDSTONE)
                 .define('A', Items.IRON_INGOT)
                 .unlockedBy("has_alexandrite", inventoryTrigger(ItemPredicate.Builder.item().of(ModItems.ALEXANDRITE.get()).build()))
+                .save(pWriter);
+
+        new GemEmpoweringRecipeBuilder(ModItems.RAW_ALEXANDRITE.get(), ModItems.ALEXANDRITE.get(), 3, 50)
+                .unlockedBy("has_raw_alexandrite", has(ModItems.RAW_ALEXANDRITE.get()))
+                .save(pWriter);
+
+        new GemEmpoweringRecipeBuilder(Items.DIAMOND, Items.COAL, 2, 10)
+                .unlockedBy("has_diamond", has(Items.DIAMOND))
                 .save(pWriter);
     }
 
